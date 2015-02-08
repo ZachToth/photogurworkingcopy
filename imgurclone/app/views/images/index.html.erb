@@ -1,0 +1,9 @@
+<h1> Welcome to Images! </h1>
+<%= link_to "Add a New Image!", new_image_url %>
+<% @images.each do |image| %>
+<ul>
+  <li> <%= link_to image.title, "images/#{image.id}" %> <%= image.rating %> </li>
+  <li> <%= image.description %> </li>
+</ul>
+<% end %>
+
